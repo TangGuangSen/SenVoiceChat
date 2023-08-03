@@ -18,9 +18,9 @@ class MyHomePage extends GetResponsiveView {
 
   @override
   Widget? desktop() {
-    return Scaffold(
+    return const Scaffold(
       body: Row(
-        children: const [
+        children: [
           ConversationWindow(),
           Expanded(child: ChatWindow()),
         ],
