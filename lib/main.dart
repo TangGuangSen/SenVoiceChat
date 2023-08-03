@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
     Get.put(MessageController());
     Get.put(PromptController());
     return GetMaterialApp(
-      initialRoute: '/',
+      initialRoute: SPLASH_PAGE,
       getPages: routes,
       unknownRoute:
-          GetPage(name: '/not_found', page: () => const UnknownRoutePage()),
+      GetPage(name: '/not_found', page: () => const UnknownRoutePage()),
       theme: FlexThemeData.light(scheme: FlexScheme.ebonyClay),
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.ebonyClay),
       themeMode: ThemeMode.system,

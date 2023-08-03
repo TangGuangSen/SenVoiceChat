@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_chatgpt/controller/settings.dart';
 import 'package:flutter_chatgpt/repository/conversation.dart';
 import 'package:flutter_chatgpt/utils/bingSearch.dart';
-import 'package:vibration/vibration.dart';
 
 abstract class LLM {
   getResponse(List<Message> messages, ValueChanged<Message> onResponse,
@@ -68,10 +67,10 @@ class YouAi extends LLM {
             message.text =
                 message.text + chatStreamEvent.choices.first.delta.content!;
             try {
-              var hasVibration = await Vibration.hasVibrator();
-              if (hasVibration != null && hasVibration) {
-                Vibration.vibrate(duration: 50);
-              }
+              // var hasVibration = await Vibration.hasVibrator();
+              // if (hasVibration != null && hasVibration) {
+              //   Vibration.vibrate(duration: 50);
+              // }
             } catch (e) {
               // ignore
             }
