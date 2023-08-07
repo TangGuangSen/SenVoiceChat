@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_chatgpt/pages/MBottomNavigattionBar.dart';
 import 'package:flutter_chatgpt/route.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../Values/values.dart';
@@ -17,6 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    FlutterNativeSplash.remove();
     Future.delayed(const Duration(seconds: 3), () {
       Get.offAllNamed(HOME_PAGE);
       // Get.to(() => Timeline());
